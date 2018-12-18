@@ -1,0 +1,15 @@
+<script src="/js/jquery.min.js" charset="utf-8"></script>
+<script>
+$(function (){
+  //read_more
+  $('.read-more button').on('click', function (){
+    let $span=$(this).parent().find('span');
+    $span.html($span.attr('content'));
+
+    $(this).parent().parent()[0].className='RichContent';
+    //$(this).parent('.RichContent').removeClass('is-collapsed');
+
+    $(this).remove();
+  });
+});
+</script>
